@@ -9,7 +9,7 @@ html = scraperwiki.scrape("http://www.nasdaqomxnordic.com/bonds/denmark/microsit
 #
 # # Find something on the page using css selectors
 root = lxml.html.fromstring(html)
-latest_price = root.cssselect(""div#db-a-lsp")
+latest_price = root.cssselect("div#db-a-lsp")
 print latest_price
 #
 # # Write out to the sqlite database using scraperwiki library
